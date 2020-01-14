@@ -1,10 +1,11 @@
 import React from 'react'
 import GW from '../assets/GW.png'
+import '../styles/Header.css'
 
 const Header = () => {
     return (
-        <div>
-            <img src={GW} alt="GW logo"/>
+        <div className='nav'>
+            <img src={GW} alt="GWlogo"/>
             <ul>
                 <li><a href=""></a>NEW YORK</li>
                 <li><a href=""></a>POLITICS</li>
