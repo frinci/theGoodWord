@@ -4,6 +4,7 @@ import Trending from '../../assets/Trending.png'
 import Footer from '../Footer'
 import axios from 'axios'
 import '../../styles/Home.css'
+import { Redirect } from 'react-router-dom'
 
 class Home extends Component {
     constructor(props) {
@@ -11,7 +12,7 @@ class Home extends Component {
         this.state = {
             articles: [],
             recipes: [],
-
+            redirect: false,
             articleInputs: {
                 title: '',
                 author: '',
@@ -118,40 +119,33 @@ class Home extends Component {
     //     this.getRecipes();
     // }
 
-    handleDelete(deletedArticle) {
-        fetch(`/notices/${deletedArticle.id}`, {
-            method: 'DELETE',
-        })
-            .then(json => {
-                this.setState(state => {
-                    const articles = state.articles.filter((article, index) => article.id !== deletedArticle.id)
-                    return {
-                        articles,
-                    }
+    handleArticleClick = async (id) => {
+        await fetch(`/articles/${id}`)
+            .then((res) => {
+                return res.json()
+            })
+            .then((json) => {
+                this.setState({
+                    articleData: json,
+                    redirect: true
                 })
             })
-            .catch(error => console.log(error))
-    }
-
-    handleUpdate(event, articleInputs) {
-        event.preventDefault()
-        fetch(`/articles/${articleInputs.id}`, {
-            body: JSON.stringify(articleInputs),
-            method: 'PUT',
-        })
-            .then(updatedArticles => {
-                this.getArticles()
-            })
-            .catch(error => console.log(error))
     }
 
     render() {
+
+        let redirect = this.state.redirect && <Redirect to={{
+            pathname: '/Article',
+            state: { article: this.state.articleData && this.state.articleData}
+        }}
+        />
         const { articles } = this.state
         const left = articles && [...articles].splice(0, articles.length / 2)
         const right = articles && [...articles].splice(articles.length / 2, articles.length - 1)
-        console.log('hey look for this one', articles)
+        
         return (
             <div>
+                {redirect}
                 <head>
                 </head>
                 <div>
@@ -160,7 +154,7 @@ class Home extends Component {
                         <img src={Trending} alt="Trending Title" />
                         <div className="leftColumn">
                             {left.map(article =>
-                                <div className='mediumCard'>
+                                <div onClick={() => this.handleArticleClick(article.id)} className='mediumCard'>
                                     <h3>{article.title}</h3>
                                     <img src={article.img_url} alt="article header img" />
                                     <h4 className="mediumQuote">{article.main_quote}</h4>
@@ -172,11 +166,11 @@ class Home extends Component {
                         <hr />
                         <div className='rightColumn'>
                             {right.map(article =>
-                                <div classname="largeCard">
+                                <div onClick={() => this.handleArticleClick(article.id)} classname="largeCard">
                                     <h2>{article.title}</h2>
                                     <img src={article.img_url} alt="article header img" />
                                     <h4 className="mediumQuote">{article.main_quote}</h4>
-                                    <p className='mediumDescription'>{article.description, console.log('hey look for this one', article)}</p>
+                                    <p className='mediumDescription'>{article.description}</p>
                                 </div>
                             )}
                         </div>

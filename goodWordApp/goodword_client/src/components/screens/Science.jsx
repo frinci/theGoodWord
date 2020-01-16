@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Header from '../Header'
 import Footer from '../Footer'
 import '../../styles/Screens.css'
+import { Redirect } from 'react-router-dom'
 
 class Science extends Component {
     constructor(props) {
@@ -24,14 +25,38 @@ class Science extends Component {
                 })
             })
     }
+
+    handleArticleClick = async (id) => {
+        await fetch(`/articles/${id}`)
+            .then((res) => {
+                return res.json()
+            })
+            .then((json) => {
+                this.setState({
+                    articleData: json,
+                    redirect: true
+                })
+            })
+    }
+
+
     render() {
+        let redirect = this.state.redirect && <Redirect to={{
+            pathname: '/Article',
+            state: { article: this.state.articleData && this.state.articleData}
+        }}
+        />
+
         const { scienceArticles } = this.state
         const articles = scienceArticles && [...scienceArticles].filter(scArticle => scArticle.category === 'Science')
+
         return (
             <div>
+                {redirect}
+
                 <Header />
                 {articles.map(article =>
-                    <div className='articleCard'>
+                    <div onClick={() => this.handleArticleClick(article.id)} className='articleCard'>
                         <h3>{article.title}</h3>
                         <img src={article.img_url} alt="article header img" />
                         <h4 className="mediumQuote">{article.main_quote}</h4>

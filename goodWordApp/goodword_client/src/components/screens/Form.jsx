@@ -34,7 +34,7 @@ class Form extends Component {
     }
 
     componentWillMount() {
-        if (this.props.notice) {
+        if (this.props.article) {
             this.setState({
                 title: this.props.article.title || '',
                 author: this.props.article.author || '',
