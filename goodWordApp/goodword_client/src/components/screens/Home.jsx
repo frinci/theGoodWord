@@ -44,11 +44,11 @@ class Home extends Component {
     getArticles() {
         fetch('/articles')
             .then(response => response.json())
-           .then(singleArticle => {
-               this.setState({
-                articles: singleArticle
-               })
-           })
+            .then(singleArticle => {
+                this.setState({
+                    articles: singleArticle
+                })
+            })
 
         // this.setState({
         //     articleInputs: {
@@ -166,7 +166,7 @@ class Home extends Component {
                                     <h4 className="mediumQuote">{article.main_quote}</h4>
                                     <p className='mediumDescription'>{article.description}</p>
                                 </div>
-                                
+
                             )}
                         </div>
                         <hr />
@@ -176,7 +176,7 @@ class Home extends Component {
                                     <h2>{article.title}</h2>
                                     <img src={article.img_url} alt="article header img" />
                                     <h4 className="mediumQuote">{article.main_quote}</h4>
-                                    <p className='mediumDescription'>{article.description,                                 console.log('hey look for this one', article)}</p>
+                                    <p className='mediumDescription'>{article.description, console.log('hey look for this one', article)}</p>
                                 </div>
                             )}
                         </div>

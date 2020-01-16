@@ -8,7 +8,7 @@ class Opinion extends Component {
         return (
             <div>
                 <Header />
-                <hr />
+                    <h1>Due to a lack of opinions, the staff in this department has been fired.</h1>
                 <Footer />
             </div>
         )
