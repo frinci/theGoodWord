@@ -44,8 +44,25 @@ class Home extends Component {
     getArticles() {
         fetch('/articles')
             .then(response => response.json())
-            .then(json => console.log(json))
-            .catch(error => console.error(error))
+           .then(singleArticle => {
+               this.setState({
+                articles: singleArticle
+               })
+           })
+
+        // this.setState({
+        //     articleInputs: {
+        //         title: '',
+        //         author: '',
+        //         author_title: '',
+        //         description: '',
+        //         main_quote: '',
+        //         category: '',
+        //         content: '',
+        //         img_url: ''
+        //     }
+        // })
+
     }
 
     // getRecipes() {
@@ -132,6 +149,7 @@ class Home extends Component {
         const { articles } = this.state
         const left = articles && [...articles].splice(0, articles.length / 2)
         const right = articles && [...articles].splice(articles.length / 2, articles.length - 1)
+        console.log('hey look for this one', articles)
         return (
             <div>
                 <head>
@@ -148,6 +166,7 @@ class Home extends Component {
                                     <h4 className="mediumQuote">{article.main_quote}</h4>
                                     <p className='mediumDescription'>{article.description}</p>
                                 </div>
+                                
                             )}
                         </div>
                         <hr />
@@ -157,12 +176,12 @@ class Home extends Component {
                                     <h2>{article.title}</h2>
                                     <img src={article.img_url} alt="article header img" />
                                     <h4 className="mediumQuote">{article.main_quote}</h4>
-                                    <p className='mediumDescription'>{article.description,                                 console.log(article)}</p>
+                                    <p className='mediumDescription'>{article.description,                                 console.log('hey look for this one', article)}</p>
                                 </div>
                             )}
                         </div>
                     </div>
-                    <Footer></Footer>
+                    <Footer />
                 </div>
             </div>
         )
