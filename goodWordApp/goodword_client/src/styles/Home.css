@@ -1,0 +1,13 @@
+.body img {
+    display: flex;
+    margin-left: 5%;
+    height: 55px
+}
+
+.body hr {
+    border: none;
+    border-left: 2px solid black;
+    background-color: black;
+    height: 100vh;
+    width: 1px;  
+}

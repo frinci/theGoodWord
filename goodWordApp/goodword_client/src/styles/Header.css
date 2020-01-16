@@ -1,5 +1,67 @@
+.nav {
+    display: flex;
+    text-align: center;
+}
 
+.nav img {
+    height: 45px;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-right: -95px;
+}
 
-img {
-    height: 45px
-} 
+.listBox {
+    margin: auto;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black
+}
+
+a:hover {
+    color: grey
+}
+
+a:visited {
+    color: #265EAA;
+    opacity: 0.01;
+}
+
+li {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-left: 4px;
+    margin-right: 4px
+
+}
+
+.navContainer hr {
+    height: 3px;
+    background-color: black;
+    border: none;
+}
+
+.title img {
+    display: flex;
+    align-items:  center;
+    height: 120px;
+    margin: 0 auto
+}
+
+.title hr {
+    height: 3px;
+    width: 90%;
+    background-color: black;
+    border: none;
+}
+
+.title p {
+    text-align: center;
+    color: #265EAA;
+    margin-top: 5px
+}

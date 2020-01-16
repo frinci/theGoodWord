@@ -35,3 +35,425 @@ Migrating to AddImgToRecipe (20200113162734)
   [1m[36mActiveRecord::InternalMetadata Load (2.7ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[35m (5.0ms)[0m  [1m[34mSELECT pg_advisory_unlock(4840250170477739745)[0m
   [1m[35m (3.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArticle Create (9.6ms)[0m  [1m[32mINSERT INTO "articles" ("title", "author", "author_title", "description", "main_quote", "category", "content", "created_at", "updated_at", "img_url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["title", "Man Who Can’t Stop Eating Asparagus Turns Green"], ["author", "Aspen FitzGerald-Dorsey"], ["author_title", "The Good Word | Staff Writer"], ["description", "His yoga students noticed that his face was not its usual red when he was entering the twentieth minute of his patented Inverted Gus-Stand. Though the blood was rushing to his head, his face was a dull green. It turns out that the green hue of his skin may actually be a sign that Gus is close to achieving vegetarian enlightenment."], ["main_quote", "'I am proud to report that I have embraced my inner vegetarian, started a leafy meditation practice and would like to invite our readership to become disciples of Gus. He will change your life and his pee smells amazing.'"], ["category", "Science"], ["content", "“Do I look chartreuse to you?” Asks Gus, a twenty-three-year-old yogi as we wait for our matcha lattes in his favorite Brooklyn cafe. “My lady says I look chartreuse,” he squints at me, “But I think it’s more of a minty hue.” Apparently, his yoga students noticed that his face was not its usual red when he was entering the twentieth minute of his patented Inverted Gus-Stand. Though the blood was rushing to his head, his face was a dull green. “One of the disciples pulled me out of my Gus-Stand and took my vitals. She’s an EMT. I think everything would have been fine once I folded my chakras into position. But some people just stir up drama, saving lives wherever they go!”\n\n        When asked for his last name at the hospital, he allegedly replied, “Just ‘Gus’ man.” So the green man’s true identity is still a mystery. Over matcha, Gus admitted that he has been experimenting with being Ketotarian for the past three months. His green routine starts with an asparagus smoothie and pea protein supplement before sunrise yoga. He follows it up with a lunch frittata of spinach and asparagus. For dinner, he has a sensible three cups of steamed asparagus, washed down with a gallon of asparagus-infused water mixed with blue-green algae. The hospital refused to comment on the diagnosis of a patient, but a yoga student told me that to reach nirvana, Gus has told them to set intentions to become one with their spirit vegetables. Beetroota wished to remain anonymous. I told her it that it would be my pleasure to only use the name she gave me, which could not possibly be anyone’s government name. So, it turns out that the green hue of his skin may actually be a sign that Gus is close to achieving vegetarian enlightenment.\n        \n        “I live for my post-sunset yoga dessert,” Gus grabs my face with two very green hands, “If you have never indulged in a kiwi-asparagus vegan gelatin sweetened with stevia, you have not lived!” I try to smile, but he refuses to let go until I agree to attend his next yoga class. When he is finished, I slurp the last of my latte and start to sweat at the thought of folding my chakras. Pleasantly, I was surprised to find that tree pose can lead to a yearning for Swiss chard. After a week of daily yoga with Gus, I am proud to report that I have embraced my inner vegetarian, started a leafy meditation practice and would like to invite our readership to become disciples of Gus. He will change your life and his pee smells amazing."], ["created_at", "2020-01-15 19:42:38.221681"], ["updated_at", "2020-01-15 19:42:38.221681"], ["img_url", "https://images.unsplash.com/photo-1555704574-f9ecf4717298?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80"]]
+  [1m[35m (23.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArticle Create (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "author", "author_title", "description", "main_quote", "category", "content", "created_at", "updated_at", "img_url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["title", "Road Construction on Electric Ave Causes Civil Unrest"], ["author", "Christopher Dowda"], ["author_title", "The Good Word | Staff Writer"], ["description", "Electric Avenue has become a hotspot of controversy following the State's decision to perform construction on it. Built in 1982, Electric Avenue is was constructed as an expressway to the upper city with no delay, but recent events have made it a sprawling dystopian nightmare."], ["main_quote", "'Look here, despite California taxing most of its population into poverty we just don't have the funding right now to run these crews. So construction is just going to be indefinite. Now if you'll excuse me I need to take my chopper up to Sactemento,' said Mayor Smoretaxes"], ["category", "Politics"], ["content", "Electric Avenue has become a hotspot of controversy following the State's decision to perform construction on it. Built in 1982, Electric Avenue is was constructed as an expressway to the upper city with no delay, but recent events have made it a sprawling dystopian nightmare.\n\n        We spoke with Eddy Grant, a member of the local community. 'We used to be able to rock right down to Electric Avenue, but now it's a nightmare. They have it down to one lane and the delays are headache,'' says Eddy. He further remarked 'out in the daytime, out in the nighttime, you still can't get higher.' Eddy is just one of many impacted by this road construction, and the civil unrest is growing by the day, many feel that the expressway did not even need roadwork.\n        \n        We sought out an interview with Mayor Kneed Smoretaxes to ask why the city planning commission made this decision in the first place. 'Well this is California, we got funding from the State if we took 4 of our most used roads and put them under construction at the same time. It's roads like SB110 the 'stairway to heaven' as well.' Says Smoretaxes. Mayor Smoretaxes has recently come under scrutiny, as many say this road construction makes toll roads more favorable. 'Well taxes from those (toll) roads are hard at work tearing apart and rebuilding our perfectly good service streets.' The Mayor commented. Road construction began 5 years ago, and many fear it will never be completed. 'Look here, despite California taxing most of its population into poverty we just don't have the funding right now to run these crews. So construction is just going to be indefinite. Now if you'll excuse me I need to take my chopper up to Sactemento,' and with that Mayor Smoretaxes cut our interview short to campaign for the banning of smores as he say they violate CA's EPA laws."], ["created_at", "2020-01-15 19:42:38.263007"], ["updated_at", "2020-01-15 19:42:38.263007"], ["img_url", "https://images.unsplash.com/photo-1460533078824-f51edbff2726?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=751&q=80"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO "articles" ("title", "author", "author_title", "description", "main_quote", "category", "content", "created_at", "updated_at", "img_url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["title", "Just a Little Nuclear War"], ["author", "Leicii Dowda"], ["author_title", "Guest Writer | Western Governors University"], ["description", "From what we have gathered, the president lacks understanding that the continued escalation\n        of tensions could and will lead to total annihilation. Our source has expressed that most in the\n        White House believe that the president is having a great time playing war chief and has been\n        quoted as saying “it’s just a little nuclear war! No big deal!”"], ["main_quote", "“It’s just a little nuclear war! No big deal!”"], ["category", "Politics"], ["content", "Today we set out to get some real answers about just what is going on with Iran. Our source,\n        who works in the White House, close to the president, but wishes to remain anonymous for their own safety says that things are quite unstable.\n        \n        From what we have gathered, the president lacks understanding that the continued escalation\n        of tensions could and will lead to total annihilation. Our source has expressed that most in the\n        White House believe that the president is having a great time playing war chief and has been\n        quoted as saying, “It’s just a little nuclear war! No big deal!”\n        \n        “Basically, we’re just gonna die! It’s not like you can hide from nuclear winter,” our source says\n        as they laugh maniacally. We did ask our source if they knew how the president planned to\n        get congress on board with any sort of war declarations. We were informed that we should\n        watch closely over the next few weeks as several close congressional allies are brought in for\n        private talks. “Certain Senators and Representatives will be doing some backdoor lobbying for\n        our president. He may be unhinged, but he really does enjoy being in power. He will do and say\n        anything to keep these people in line,” says our source.\n        \n        So, here we go folks. Strap on your hats, and get ready for a little nuclear war."], ["created_at", "2020-01-15 19:42:38.267796"], ["updated_at", "2020-01-15 19:42:38.267796"], ["img_url", "https://images.unsplash.com/photo-1569285645462-a3f9c6332d56?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArticle Create (3.3ms)[0m  [1m[32mINSERT INTO "articles" ("title", "author", "author_title", "description", "main_quote", "category", "content", "created_at", "updated_at", "img_url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["title", "Woman Grows Antlers After Being Bitten by Deer\n        "], ["author", "F.E. French"], ["author_title", "The Good Word | Senior Editor "], ["description", "It’s hard to say exactly what caused the growth on Middleton’s head, doctors are stumped by the unique phenomenon. Despite many tests, physicians have yet to find an explanation. Nonetheless, Middleton isn’t letting the new appendages get her down."], ["main_quote", "When I reached up, I found these bloody things! Literally bloody! Like they’d just burst forth from my skull—sorry was that too graphic?"], ["category", "Science"], ["content", "Evette Middleton, a frequenter of the New Jersey Palisade’s forest, awoke to find antlers sprouting from her scalp. ‘It was the strangest thing,” she says, “I had the worst headache all night, and in the morning, I got these things stuck in the headboard! I couldn’t figure out was what holding me down, and when I reached up, I found these bloody things! Literally bloody! Like they’d just burst forth from my skull—sorry was that too graphic?’\n\n        While on one of her regular hikes to forage for mushrooms in the woods, Middleton and her companions were met by a family of deer. “They were so sweet and peaceful, we fed them mushrooms from our day’s harvest. ‘They weren’t anything special—cross my heart—they were just some beautiful yellow chanterelles. But, as soon as they bit into them, they couldn’t have enough. They ate our whole stash and nipped my fingers while they were at it!’\n        \n        It’s hard to say exactly what caused the growth on Middleton’s head, doctors are stumped by the unique phenomenon. Despite many tests, physicians have yet to find an explanation. ‘We believe it to be some kind of papilloma virus, but we haven’t found any abnormal cells. Even the antlers, themselves, appear to have no foreign cells,’ says Dr. Pamela Raymore, head of medicine at NYU Langone Medical Center, NJ location. \n        \n        Nonetheless, Middleton isn’t letting the new appendages get her down, ‘You know, my husband thinks they’re unique and exotic and I’m basically a celebrity in town. So, you know, I’m into it,’ she says with a shrug."], ["created_at", "2020-01-15 19:42:38.273370"], ["updated_at", "2020-01-15 19:42:38.273370"], ["img_url", "https://scontent-iad3-1.xx.fbcdn.net/v/t31.0-8/s960x960/664707_462667840443364_1165186316_o.jpg?_nc_cat=106&_nc_ohc=Djmciv8blwAAQnIc9uAIr1ybTFIyrhjY0fSK68oJhvAxLrKca0c2aQ90g&_nc_ht=scontent-iad3-1.xx&_nc_tp=1&oh=11239c7d647fff4d46c84b5d827e84cf&oe=5E8FB8FB"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArticle Create (0.6ms)[0m  [1m[32mINSERT INTO "articles" ("title", "author", "author_title", "description", "main_quote", "category", "content", "created_at", "updated_at", "img_url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["title", "Subway On-Time Percentage Offered as Proof of Extraterrestrial Presence on Earth"], ["author", "Amelia Trask"], ["author_title", "The Good Word | Staff Writer"], ["description", "When asked if she had any proof of extraterrestrial involvement in our city’s transit, Vane pointed to the sudden increase of police officers in stations."], ["main_quote", "‘—So yeah, it’s got to be aliens. Martians, probably. We all know it. It’s, like, common sense at this point.’"], ["category", "NewYork"], ["content", "It seems the impossible has happened. A mere two and a half years after the MTA’s ‘summer of hell’ in 2017, the MTA announced the highest train ‘on time’ rates since 2013. According to MTA president Andy Byford, weekday subways ran at a rate of 84% on time, with delays down 52% in the last twelve months. \n\n        New Yorkers are overjoyed. A mostly-on-time subway? It’s a dream come true for the millions of straphangers who use the trains to commute to work every day. But others are confused by the news. \n        \n        With daily reports of failing signals, doors opening mid-ride, a transit chief who keeps trying to resign his post so he doesn’t have to deal with a difficult governor, some have begun to wonder how, in the midst of all this trouble, this marvelous change of fates could have come about. \n        \n        ‘I’m telling you, it’s aliens,’ said Jo Vane, a Brooklyn resident. ‘There’s no other explanation for it. Cuomo’s too stuck up to get anything done, de Blasio is too busy commuting by car to his gym, and Byford’s hands are tied. It’s got to be aliens.’\n        \n        When asked if she had any proof of extraterrestrial involvement in our city’s transit, Vane pointed to the sudden increase of police officers in stations. ‘With so many other things the NYPD could be doing, the only plausible explanation is that they expect the martian conductors to reveal themselves during a routine subway stop.’ Asked about her certainty that the helpful aliens were indeed from Mars, Vane replied, ‘They’re our closest neighbors. If they were coming from somewhere like one of Jupiter’s moons, surely they wouldn’t be here yet.’\n        \n        When asked, Matthew Castro, another subway rider on his way to work, confirmed that he too had considered the possibility that the MTA was being run by forces outside the city, the state, the country, and even the Earth. ‘It was so messed up, and now it’s gotten better. Nothing has changed anywhere else, man, and everything is going to—’ here he used a word that we cannot in good conscience print ‘—so yeah, it’s got to be aliens. Martians, probably. We all know it. It’s, like, common sense at this point.’\n        \n        We were even able to get corroboration for this story from right within the Good Word newsroom. Fellow city desk reporter Cordelia Houston recalls a night in late December when she happened to be exiting her local station behind a train conductor getting off of work, and recalls that he (the conductor) appeared to glow around the collar, as if his skin were emitting a faint green light. When asked whether her train had indeed run on time, Houston (author of last week’s exposé on common pigeons trained to spy on city council meetings by candidates hoping to challenge sitting members in the 2021 elections) recalls that the timing of her commute precisely matched that predicted by her favorite transit apps. \n        \n        ‘Your sources are right,’ said Houston. ‘Nothing else is possible at this point. So martians it must be.’\n        \n        Amelia Trask is a reporter for the Good Word’s New York City desk. "], ["created_at", "2020-01-15 19:42:38.283108"], ["updated_at", "2020-01-15 19:42:38.283108"], ["img_url", "https://images.unsplash.com/photo-1494587351196-bbf5f29cff42?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArticle Create (0.9ms)[0m  [1m[32mINSERT INTO "articles" ("title", "author", "author_title", "description", "main_quote", "category", "content", "created_at", "updated_at", "img_url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["title", "Man on the Moon Discovered to Be Smudge on Telescope Lens"], ["author", "Aspen FitzGerald-Dorsey"], ["author_title", "The Good Word | Staff Writer"], ["description", "Last week, NASA announced that they had definitive proof of alien life on the far side of the moon. This morning, a press conference was held to retract the earlier statement. Apparently, the revolutionary telescope they recently finished building has a smudge on its ten billion dollar lens."], ["main_quote", "“We thought we had done a good job cleaning it, but it turns out we made the perfect man-shaped smudge,” said a representative from NASA."], ["category", "Science"], ["content", "Last week, NASA announced that they had definitive proof of alien life on the far side of the moon. This morning, a press conference was held to retract the earlier statement. Apparently, the revolutionary telescope they recently finished building has a smudge on its ten billion dollar lens. \n\n        “We thought we had done a good job cleaning it, but it turns out we made the perfect man-shaped smudge,” said a representative from NASA. “We’re lucky that we needed the telescope for other planets. Otherwise we might never have known.”       \n        \n        Allegedly, the telescope spotted the same man on four different regions on the moon. The organization was very excited to have discovered a new intelligent species. That is, until another assignment made them point the telescope at a neighboring planet. When the exact same man was spotted in a mountain valley on Venus, Marvin Nikolaj realized that the shape must be on the telescope itself. He was the technician who alerted the NASA team of the problem. \n        \n        Nikolaj was quoted as saying, “There is absolutely no way the same man could be in the frozen-over hell of the moon and also in the hellfires of Venus—unless he were dead. I mean, we tested the lenses a hundred times before installation. There was no way it was a manufacturing error. So I knew it had to be schmutz!”\n        \n        When asked how the problem can be fixed, the technician sighed, “It will be a space shuttle repair mission in about... seventeen months? Give or take? It’s top priority once the government shutdown is over and we get our funding.”\n        \n        A team of highly skilled astronauts will be required to apply space-grade windex to the telescope lens. A Chief Schmutz Inspector will be selected to wield the eleven-foot microfiber cloth that will be needed to shine the lens after the smudge is removed. Tests are currently being conducted to determine which member of the shuttle team is most qualified for the job. \n        \n        “I have been doing wrist crunches for weeks,” said one of the astronauts. They wished to remain anonymous so that their teammates wouldn’t judge them for talking to the press prematurely. “It’s all about getting these forearms jacked,” the astronaut boasted, “this week, I’m up to four hours on the shake weight. Chief Schmutz Inspector is basically in the bag.” \n        \n        Hopefully, the telescope will be available for full use in 2022. Until then, scientists have been alerted so that they can make calculations that work around the smudge. "], ["created_at", "2020-01-15 19:42:38.290057"], ["updated_at", "2020-01-15 19:42:38.290057"], ["img_url", "https://images.unsplash.com/photo-1447433589675-4aaa569f3e05?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArticle Create (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "author", "author_title", "description", "main_quote", "category", "content", "created_at", "updated_at", "img_url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["title", "Times Square, Sometime in the 90’s"], ["author", "Christine Faucher-Kelley"], ["author_title", "The Good Word | Staff Writer"], ["description", "A man began to sing “Here Comes The Sun” by the Beatles. A man got up from a bench, pulled out a harmonica and played along. Before you knew it, a circle had gathered around the pair."], ["main_quote", "We were united... the discomfort we thought we had to feel had morphed into a shared, human connection."], ["category", "NewYork"], ["content", "Live in NYC long enough and you’re bound to have some Subway Stories, and as a denizen for over 50 years, I’ve got plenty!\n        \n        Walking in the Subway at Times Square always has me on “high alert”; you never know what you’ll find. Such a dramatically diverse cross-section of the planet is found here at our self-designated “center of the universe”.\n\n        This time, my vigilance was unfounded. As I walked along I heard familiar guitar music floating towards me and a voice in accompaniment began to sing “Here Comes The Sun” by the Beatles. A man got up from a bench, pulled out a harmonica and played along. Before you knew it, a circle had gathered around the pair. Someone started tapping on a glass bottle. Another person began to dance, while a couple joined in the singing. People were smiling and laughing, no longer strangers on the platform, we were united... the discomfort we thought we had to feel had morphed into a shared, human connection.\n\n        An express train pulled into the station and drowned out the pair. The crowd dispersed and boarded the train, leaving the guitarist on the platform, playing the last few notes of his song."], ["created_at", "2020-01-15 19:42:38.316073"], ["updated_at", "2020-01-15 19:42:38.316073"], ["img_url", "https://images.unsplash.com/photo-1531503406248-d63777b50f39?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipe Create (5.5ms)[0m  [1m[32mINSERT INTO "recipes" ("title", "author", "author_title", "description", "ingredients", "category", "content", "created_at", "updated_at", "img_url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["title", "Ed’s Bread Puddin’"], ["author", "Edward French"], ["author_title", "The Good Word | Head Chef"], ["description", "A little somethin' buttery, fluffy and sweet to satisfy that sweet tooth you've been nursing."], ["ingredients", "2 ½ to 3 cups milk\n        ¼ cup butter or somethin’ like butter\n        2 eggs, lightly beaten, perhaps slapped around a bit, but not too bad, on second thought just beat them lightly\n        ½ cup sugar\n        ½ tablespoon vanilla, more or less, I like more\n        1 teaspoon cinnamon\n        1 teaspoon nutmeg\n        ¼ teaspoon salt, no more, salt isn’t supposed to be good for you. Pepper is NOT a good substitute.\n        4 to 5 cups dry bread crumbs\n        ½ cup raisins, dates, nuts or some such confections, the choice is all yours"], ["category", "Recipes"], ["content", "Heat oven to round ‘bout 350°. Mix eggs, sugar, cinnamon, and salt in a big enough bowl (I usually get a bowl that’s too small and then I have more dishes to do) Stir in bread crumbs (and confections if’in you plan on using them). Put the bowl aside (you’ll need it later). Heat milk and butter (or somethin’ like butter) until butter is melted and the milk is scalded, pour into the bowl of bread crumbs and other stuff (it should still be in the bowl you set aside earlier), mix well, but don’t use your hand, the milk and butter is hot., use a fork or spoon or whatever you usually use to mix things, personally I have my favorite fork. Pour this mixture into an ungreased 1 ½ quart casserole dish, sprinkle with nutmeg (remove the mixing thingie if you haven’t already). Place the casserole dish in a pan of very hot water, rouns’bout 1 inch deep.\n        Bake uncovered for 45ish minutes or until the top crust is a golden brown (more of a beige really).\n        Serve warm, or cold, or with cream or milk or however you prefer it.\n        ENJOY."], ["created_at", "2020-01-15 19:42:38.342504"], ["updated_at", "2020-01-15 19:42:38.342504"], ["img_url", "https://cdn.pixabay.com/photo/2015/03/21/17/03/bread-pudding-683918_960_720.jpg"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipe Create (0.4ms)[0m  [1m[32mINSERT INTO "recipes" ("title", "author", "author_title", "description", "ingredients", "category", "content", "created_at", "updated_at", "img_url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["title", ""], ["author", ""], ["author_title", ""], ["description", ""], ["ingredients", ""], ["category", ""], ["content", ""], ["created_at", "2020-01-15 19:42:38.355115"], ["updated_at", "2020-01-15 19:42:38.355115"], ["img_url", ""]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipe Create (1.3ms)[0m  [1m[32mINSERT INTO "recipes" ("title", "author", "author_title", "description", "ingredients", "category", "content", "created_at", "updated_at", "img_url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["title", ""], ["author", ""], ["author_title", ""], ["description", ""], ["ingredients", ""], ["category", ""], ["content", ""], ["created_at", "2020-01-15 19:42:38.361058"], ["updated_at", "2020-01-15 19:42:38.361058"], ["img_url", ""]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipe Create (0.5ms)[0m  [1m[32mINSERT INTO "recipes" ("title", "author", "author_title", "description", "ingredients", "category", "content", "created_at", "updated_at", "img_url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["title", ""], ["author", ""], ["author_title", ""], ["description", ""], ["ingredients", ""], ["category", ""], ["content", ""], ["created_at", "2020-01-15 19:42:38.369635"], ["updated_at", "2020-01-15 19:42:38.369635"], ["img_url", ""]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/articles" for ::1 at 2020-01-15 14:43:47 -0500
+  [1m[35m (18.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (2.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:8:in `index'
+Completed 200 OK in 65ms (Views: 42.1ms | ActiveRecord: 20.0ms | Allocations: 10136)
+
+
+Started GET "/Recipes" for ::1 at 2020-01-15 14:43:56 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/Recipes"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.1) lib/rack/runtime.rb:24:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.1.1) lib/rack/sendfile.rb:113:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/Recipes" for ::1 at 2020-01-15 14:44:03 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/Recipes"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.1) lib/rack/runtime.rb:24:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.1.1) lib/rack/sendfile.rb:113:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/Recipes" for ::1 at 2020-01-15 14:44:29 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/Recipes"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.1) lib/rack/runtime.rb:24:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.1.1) lib/rack/sendfile.rb:113:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2020-01-15 15:08:35 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.1) lib/rack/runtime.rb:24:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.1.1) lib/rack/sendfile.rb:113:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2020-01-15 16:44:15 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.1) lib/rack/runtime.rb:24:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.1.1) lib/rack/sendfile.rb:113:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/articles" for ::1 at 2020-01-15 17:13:22 -0500
+Processing by ArticlesController#index as */*
+  Parameters: {"article"=>{}}
+  [1m[36mArticle Load (24.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:8:in `index'
+Completed 200 OK in 52ms (Views: 21.7ms | ActiveRecord: 24.1ms | Allocations: 2459)
+
+
+Started POST "/articles?article[title]=Woman%20Stares%20too%20Long%20at%20Tree%20and%20Weirds%20Everyone%20Out&article[author]=F.E.%20French&article[author_title]=The%20Good%20Word%20%7C%20Senior%20Editor&article[description]=Lorem%20ipsum%20dolor%20sit%20amet,%20consectetur%20adipiscing%20elit,%20sed%20do%20eiusmod%20tempor%20incididunt%20ut%20labore%20et%20dolore%20magna%20aliqua.%20Ut%20enim%20ad%20minim%20veniam,%20quis%20nostrud%20exercitation%20ullamco%20laboris%20nisi%20ut%20aliquip%20ex%20ea%20commodo%20consequat.%20&article[content]=Lorem%20ipsum%20dolor%20sit%20amet,%20consectetur%20adipiscing%20elit,%20sed%20do%20eiusmod%20tempor%20incididunt%20ut%20labore%20et%20dolore%20magna%20aliqua.%20Ut%20enim%20ad%20minim%20veniam,%20quis%20nostrud%20exercitation%20ullamco%20laboris%20nisi%20ut%20aliquip%20ex%20ea%20commodo%20consequat.%20Duis%20aute%20irure%20dolor%20in%20reprehenderit%20in%20voluptate%20velit%20esse%20cillum%20dolore%20eu%20fugiat%20nulla%20pariatur.%20Excepteur%20sint%20occaecat%20cupidatat%20non%20proident,%20sunt%20in%20culpa%20qui%20officia%20deserunt%20mollit%20anim%20id%20est%20laborum." for ::1 at 2020-01-15 18:12:29 -0500
+Processing by ArticlesController#create as */*
+  Parameters: {"article"=>{"title"=>"Woman Stares too Long at Tree and Weirds Everyone Out", "author"=>"F.E. French", "author_title"=>"The Good Word | Senior Editor", "description"=>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ", "content"=>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."}}
+  [1m[35m (162.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/articles_controller.rb:20:in `create'
+  [1m[36mArticle Create (46.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "author", "author_title", "description", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Woman Stares too Long at Tree and Weirds Everyone Out"], ["author", "F.E. French"], ["author_title", "The Good Word | Senior Editor"], ["description", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "], ["content", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."], ["created_at", "2020-01-15 23:12:29.798842"], ["updated_at", "2020-01-15 23:12:29.798842"]]
+  ↳ app/controllers/articles_controller.rb:20:in `create'
+  [1m[35m (21.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/articles_controller.rb:20:in `create'
+Completed 201 Created in 250ms (Views: 3.8ms | ActiveRecord: 229.7ms | Allocations: 2839)
+
+
+Started PUT "/articles?article[title]=Woman%20Stares%20too%20Long%20at%20Tree%20and%20Weirds%20Everyone%20Out&article[author]=F.E.%20French&article[author_title]=The%20Good%20Word%20%7C%20Senior%20Editor&article[description]=Lorem%20ipsum%20dolor%20sit%20amet,%20consectetur%20adipiscing%20elit,%20sed%20do%20eiusmod%20tempor%20incididunt%20ut%20labore%20et%20dolore%20magna%20aliqua.%20Ut%20enim%20ad%20minim%20veniam,%20quis%20nostrud%20exercitation%20ullamco%20laboris%20nisi%20ut%20aliquip%20ex%20ea%20commodo%20consequat.%20&article[content]=Lorem%20ipsum%20dolor%20sit%20amet,%20consectetur%20adipiscing%20elit,%20sed%20do%20eiusmod%20tempor%20incididunt%20ut%20labore%20et%20dolore%20magna%20aliqua.%20Ut%20enim%20ad%20minim%20veniam,%20quis%20nostrud%20exercitation%20ullamco%20laboris%20nisi%20ut%20aliquip%20ex%20ea%20commodo%20consequat.%20Duis%20aute%20irure%20dolor%20in%20reprehenderit%20in%20voluptate%20velit%20esse%20cillum%20dolore%20eu%20fugiat%20nulla%20pariatur.%20Excepteur%20sint%20occaecat%20cupidatat%20non%20proident,%20sunt%20in%20culpa%20qui%20officia%20deserunt%20mollit%20anim%20id%20est%20laborum." for ::1 at 2020-01-15 18:12:55 -0500
+  
+ActionController::RoutingError (No route matches [PUT] "/articles"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.1) lib/rack/runtime.rb:24:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.1.1) lib/rack/sendfile.rb:113:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/articles/8" for ::1 at 2020-01-15 18:13:22 -0500
+Processing by ArticlesController#show as */*
+  Parameters: {"id"=>"8", "article"=>{}}
+  [1m[36mArticle Load (2.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:44:in `set_article'
+Completed 200 OK in 184ms (Views: 0.5ms | ActiveRecord: 40.0ms | Allocations: 2537)
+
+
+Started PUT "/articles/8?article[content]=Lorem%20ipsum%20dolor%20sit%20amet,%20consectetur%20adipiscing%20elit,%20sed%20do%20eiusmod%20tempor%20incididunt%20ut%20labore%20et%20dolore%20magna%20aliqua.%20Ut%20enim%20ad%20minim%20veniam,%20quis%20nostrud%20exercitation%20ullamco%20laboris%20nisi%20ut%20aliquip%20ex%20ea%20commodo%20consequat.%20Duis%20aute%20irure%20dolor%20in%20reprehenderit%20in%20voluptate%20velit%20esse%20cillum%20dolore%20eu%20fugiat%20nulla%20pariatur.%20Excepteur%20sint%20occaecat%20cupidatat%20non%20proident,%20sunt%20in%20culpa%20qui%20officia%20deserunt%20mollit%20anim%20id%20est%20laborum.%20Sed%20ut%20perspiciatis%20unde%20omnis%20iste%20natus%20error%20sit%20voluptatem%20accusantium%20doloremque%20laudantium,%20totam%20rem%20aperiam,%20eaque%20ipsa%20quae%20ab%20illo%20inventore%20veritatis%20et%20quasi%20architecto%20beatae%20vitae%20dicta%20sunt%20explicabo.%20Nemo%20enim%20ipsam%20voluptatem%20quia%20voluptas%20sit%20aspernatur%20aut%20odit%20aut%20fugit,%20sed%20quia%20consequuntur%20magni%20dolores%20eos%20qui%20ratione%20voluptatem%20sequi%20nesciunt.%20Neque%20porro%20quisquam%20est,%20qui%20dolorem%20ipsum%20quia%20dolor%20sit%20amet,%20consectetur,%20adipisci%20velit,%20sed%20quia%20non%20numquam%20eius%20modi%20tempora%20incidunt%20ut%20labore%20et%20dolore%20magnam%20aliquam%20quaerat%20voluptatem.%20Ut%20enim%20ad%20minima%20veniam,%20quis%20nostrum%20exercitationem%20ullam%20corporis%20suscipit%20laboriosam,%20nisi%20ut%20aliquid%20ex%20ea%20commodi%20consequatur?%20Quis%20autem%20vel%20eum%20iure%20reprehenderit%20qui%20in%20ea%20voluptate%20velit%20esse%20quam%20nihil%20molestiae%20consequatur,%20vel%20illum%20qui%20dolorem%20eum%20fugiat%20quo%20voluptas%20nulla%20pariatur?" for ::1 at 2020-01-15 18:14:06 -0500
+Processing by ArticlesController#update as */*
+  Parameters: {"article"=>{"content"=>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"}, "id"=>"8"}
+  [1m[36mArticle Load (2.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:44:in `set_article'
+  [1m[35m (1.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/articles_controller.rb:29:in `update'
+  [1m[36mArticle Update (14.1ms)[0m  [1m[33mUPDATE "articles" SET "content" = $1, "updated_at" = $2 WHERE "articles"."id" = $3[0m  [["content", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"], ["updated_at", "2020-01-15 23:14:06.453050"], ["id", 8]]
+  ↳ app/controllers/articles_controller.rb:29:in `update'
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/articles_controller.rb:29:in `update'
+Completed 200 OK in 30ms (Views: 0.8ms | ActiveRecord: 18.5ms | Allocations: 3041)
+
+
+Started GET "/articles/8" for ::1 at 2020-01-15 18:14:26 -0500
+Processing by ArticlesController#show as */*
+  Parameters: {"id"=>"8", "article"=>{}}
+  [1m[36mArticle Load (5.9ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:44:in `set_article'
+Completed 200 OK in 9ms (Views: 0.7ms | ActiveRecord: 5.9ms | Allocations: 822)
+
+
+Started DELETE "/articles/8" for ::1 at 2020-01-15 18:14:33 -0500
+Processing by ArticlesController#destroy as */*
+  Parameters: {"id"=>"8", "article"=>{}}
+  [1m[36mArticle Load (2.7ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:44:in `set_article'
+  [1m[35m (1.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/articles_controller.rb:38:in `destroy'
+  [1m[36mArticle Destroy (0.6ms)[0m  [1m[31mDELETE FROM "articles" WHERE "articles"."id" = $1[0m  [["id", 8]]
+  ↳ app/controllers/articles_controller.rb:38:in `destroy'
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/articles_controller.rb:38:in `destroy'
+Completed 204 No Content in 14ms (ActiveRecord: 6.9ms | Allocations: 2311)
+
+
+Started GET "/articles/8" for ::1 at 2020-01-15 18:14:38 -0500
+Processing by ArticlesController#show as */*
+  Parameters: {"id"=>"8", "article"=>{}}
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:44:in `set_article'
+Completed 404 Not Found in 3ms (ActiveRecord: 0.5ms | Allocations: 635)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Article with 'id'=8):
+  
+app/controllers/articles_controller.rb:44:in `set_article'
+Started GET "/articles" for ::1 at 2020-01-15 18:44:12 -0500
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (8.7ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:8:in `index'
+Completed 200 OK in 21ms (Views: 11.2ms | ActiveRecord: 8.7ms | Allocations: 2418)
+
+
+Started GET "/articles" for ::1 at 2020-01-15 18:45:49 -0500
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (1.7ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:8:in `index'
+Completed 200 OK in 119ms (Views: 21.7ms | ActiveRecord: 94.5ms | Allocations: 9626)
+
+
+Started GET "/articles" for ::1 at 2020-01-15 18:46:09 -0500
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (1.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:8:in `index'
+Completed 200 OK in 8ms (Views: 6.5ms | ActiveRecord: 1.1ms | Allocations: 2360)
+
+
+Started GET "/favicon.ico" for ::1 at 2020-01-15 18:46:11 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.1) lib/rack/runtime.rb:24:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.1.1) lib/rack/sendfile.rb:113:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/articles" for ::1 at 2020-01-15 18:48:22 -0500
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (1.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:8:in `index'
+Completed 200 OK in 55ms (Views: 45.0ms | ActiveRecord: 6.5ms | Allocations: 10171)
+
+
+Started GET "/articles" for ::1 at 2020-01-15 18:48:57 -0500
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (1.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 4.3ms | ActiveRecord: 1.5ms | Allocations: 2380)
+
+
+Started POST "/articles" for ::1 at 2020-01-15 18:49:57 -0500
+Processing by ArticlesController#create as HTML
+  Parameters: {"article"=>{}}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms | Allocations: 153)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: article):
+  
+app/controllers/articles_controller.rb:50:in `article_params'
+app/controllers/articles_controller.rb:19:in `create'
+Started POST "/articles" for ::1 at 2020-01-15 18:51:01 -0500
+Processing by ArticlesController#create as HTML
+  Parameters: {"content"=>"sdf", "article"=>{"content"=>"sdf"}}
+[31mUnpermitted parameter: :article[0m
+  [1m[35m (2.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/articles_controller.rb:21:in `create'
+  [1m[36mArticle Create (3.7ms)[0m  [1m[32mINSERT INTO "articles" ("content", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["content", "sdf"], ["created_at", "2020-01-15 23:51:01.535063"], ["updated_at", "2020-01-15 23:51:01.535063"]]
+  ↳ app/controllers/articles_controller.rb:21:in `create'
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/articles_controller.rb:21:in `create'
+Completed 201 Created in 39ms (Views: 1.7ms | ActiveRecord: 17.7ms | Allocations: 8875)
+
+
+Started GET "/articles" for ::1 at 2020-01-15 18:51:10 -0500
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (5.8ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:8:in `index'
+Completed 200 OK in 15ms (Views: 7.6ms | ActiveRecord: 5.8ms | Allocations: 2564)
+
+
+Started POST "/articles" for ::1 at 2020-01-16 13:24:22 -0500
+Processing by ArticlesController#create as HTML
+  Parameters: {"title"=>"hey", "article"=>{"title"=>"hey"}}
+[31mUnpermitted parameter: :article[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/articles_controller.rb:21:in `create'
+  [1m[36mArticle Create (14.9ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "hey"], ["created_at", "2020-01-16 18:24:22.344318"], ["updated_at", "2020-01-16 18:24:22.344318"]]
+  ↳ app/controllers/articles_controller.rb:21:in `create'
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/articles_controller.rb:21:in `create'
+Completed 201 Created in 25ms (Views: 1.4ms | ActiveRecord: 16.2ms | Allocations: 2467)
+
+
+Started GET "/articles" for ::1 at 2020-01-16 13:24:29 -0500
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.8ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:8:in `index'
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.8ms | Allocations: 2715)
+
+
+Started GET "/articles" for 127.0.0.1 at 2020-01-16 13:25:06 -0500
+Processing by ArticlesController#index as */*
+  [1m[36mArticle Load (0.9ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.9ms | Allocations: 2676)
+
+
+Started GET "/articles" for 127.0.0.1 at 2020-01-16 13:25:43 -0500
+Processing by ArticlesController#index as */*
+  [1m[36mArticle Load (0.8ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:8:in `index'
+Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 0.8ms | Allocations: 2690)
+
+
+Started GET "/articles" for 127.0.0.1 at 2020-01-16 13:25:50 -0500
+Processing by ArticlesController#index as */*
+  [1m[36mArticle Load (3.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:8:in `index'
+Completed 200 OK in 12ms (Views: 8.4ms | ActiveRecord: 3.2ms | Allocations: 2677)
+
+
+Started GET "/articles" for 127.0.0.1 at 2020-01-16 13:37:06 -0500
+Processing by ArticlesController#index as */*
+  [1m[36mArticle Load (3.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:8:in `index'
+Completed 200 OK in 9ms (Views: 5.2ms | ActiveRecord: 3.3ms | Allocations: 2733)
+
+
+Started GET "/articles" for 127.0.0.1 at 2020-01-16 13:37:34 -0500
+Processing by ArticlesController#index as */*
+  [1m[36mArticle Load (1.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:8:in `index'
+Completed 200 OK in 8ms (Views: 5.7ms | ActiveRecord: 1.5ms | Allocations: 2675)
+
+
